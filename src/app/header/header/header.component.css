@@ -1,0 +1,13 @@
+h1 {
+  text-align:center;
+  color:#fb0404;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+header {
+  background-color: #120639;
+  padding-top:15px;
+  padding-bottom:15px;
+  border-bottom: 10px solid #ffffff;
+}
+

@@ -20,16 +20,24 @@ h2 {
 }
 
 label {
-  font-size: 15px;
+  font-size: 20px;
 }
 
-label {
-  color:#0844a4;
+label, p {
+  color:#ffffff;
 }
 
-#formulario {
-  width: 75%;
-  padding-left: 70px;
+#login {
+  background-color: #fb0404;
+  border: 3px solid #e61610;
+  padding:5%;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+form {
+  text-align: center;
 }
 
 .ingresar {

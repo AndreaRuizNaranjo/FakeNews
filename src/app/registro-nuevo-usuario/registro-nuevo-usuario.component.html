@@ -5,39 +5,75 @@
 
 <body>
 
-	<h2>Crear nueva cuenta</h2>
 
-	<div id="formulario">
-		<form action="">
-			<label>Usuario:</label><br><br>
-			<input type="text" name="usuario" class="form-control"><br><br>
-      <label>Correo:</label><br><br>
-			<input type="text" name="usuario" class="form-control"><br><br>
-      <label>Contraseña:</label><br><br>
-      <input type="password" name="clave" class="form-control"><br><br>
-      <label>Ingresar contraseña nuevamente:</label><br><br>
-      <input type="password" name="clave" class="form-control"><br><br>
-      <label>Tipo de usuario:</label><br><br>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">Periodista</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">Validador</label>
-      </div>
-      <br><br><br><br>
-      <input class="ingresar btn btn-primary btn-lg" type="submit" value="REGISTRARSE">
-    </form>
-  </div>
+  
+    <div class="row" >
 
-  <div id="footer">
-    <div>
-      <a routerLink="/olvide-mi-clave">¿Olvidaste tu contraseña?</a>
+      <div class="col-md-4 mx-auto">
+        <div class="card contenedor" >
+          <div class="card-header text-center textico">
+              Account Register
+          </div>
+
+          <img src="https://image.flaticon.com/icons/svg/1653/1653700.svg" class="mx-auto d-block m-4 logo">
+          
+          <div class="card-body" class="cardbody">
+            <form action="" class="contenedor-register" >
+              
+              <div class="form-group">
+                <input type="name" class="form-control" name="name" placeholder="Name">
+              </div>
+
+              <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Email">
+              </div>
+
+              <div class="form-group">
+                  <input type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+
+              <div class="form-group">
+                  <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
+              </div>
+
+              <div class="form-group">
+                  <div class="form-row align-items-center">
+                      <div class="col-auto my-1">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Tipo de Usuario</label>
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                          <option selected>Choose...</option>
+                          <option value="Periodista">Periodista</option>
+                          <option value="Validador">Validador</option>
+
+                        </select>
+                      </div>
+              </div>
+              </div>
+
+              <div class= "form-group">
+                  <button type="submit" class=" boton btn btn-primary btn-block btn-lg">
+                    Register
+                  </button>
+              </div>
+
+
+              <div class="form-group">
+                  <a routerLink="/olvide-mi-clave" class="lost">¿Olvidaste tu contraseña?</a>
+                  <a routerLink="/inicio" class="singin">Iniciar Sesión</a> 
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div>
-      <a routerLink="/inicio">Iniciar Sesión</a>
-    </div>
-  </div>
+
+
+    <footer  class="navbar">
+        <div class="container text-center">
+                <h3 class="navbar-text col-md-12 col-sm-12 col-xs-12"> </h3>
+        </div>
+    </footer>
 
 </body>

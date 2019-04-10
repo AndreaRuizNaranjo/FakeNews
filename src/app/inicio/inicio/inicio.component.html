@@ -5,25 +5,57 @@
 
 <body>
 
-	<h2>Bienvenido</h2>
+	    
+    <header  class="navbar">
+        <div class="container text-center">
+                <h3 class="navbar-text col-md-12 col-sm-12 col-xs-12"> </h3>
+        </div>
+      </header>
 
-	<div id="login">
-		<form action="">
-			<label>Usuario</label><br><br>
-			<input type="text" name="usuario" class="form-control"><br>
-      <label>Contraseña</label><br><br>
-      <input type="password" name="clave" class="form-control"><br><br>
-      <input class="ingresar btn btn-primary btn-lg" type="submit" value="INGRESAR">
-    </form>
-  </div>
+  <div class="row" >
 
-  <div id="footer">
-    <div>
-      <a routerLink="/olvide-mi-clave">¿Olvidaste tu contraseña?</a>
+      <div class="col-md-4 mx-auto">
+        <div class="card contenedor" >
+          <div class="card-header text-center textico">
+              Account Login
+          </div>
+          <img src="https://image.flaticon.com/icons/png/512/295/295128.png" class="mx-auto d-block m-4 logo">
+          <div class="card-body" class="cardbody">
+            <form action="" class="contenedor-login" >
+              
+              <div class="form-group">
+                <input type="name" class="form-control" name="name" placeholder="Username">
+              </div>
+
+              <div class="form-group">
+                  <input type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+
+
+              <div class= "form-group">
+                  <button type="submit" class=" boton btn btn-primary btn-block btn-lg">
+                    Login
+                  </button>
+              </div>
+
+
+              <div class="form-group">
+                  <a routerLink="/olvide-mi-clave" class="lost">¿Olvidaste tu contraseña?</a>
+                  <a routerLink="/registro" class="singup">Registrarse</a> 
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div>
-      <a routerLink="/registro">Registrarse</a>
-    </div>
-  </div>
+
+    
+    <footer  class="navbar">
+        <div class="container text-center">
+                <h3 class="navbar-text col-md-12 col-sm-12 col-xs-12"> </h3>
+        </div>
+    </footer>
 
 </body>

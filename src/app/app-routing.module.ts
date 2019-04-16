@@ -8,6 +8,7 @@ import { NuevaNoticiaComponent } from './nueva-noticia/nueva-noticia.component';
 import { NoticiasPorValidarComponent } from './noticias-por-validar/noticias-por-validar.component';
 import { OlvideMiClaveComponent } from './olvide-mi-clave/olvide-mi-clave.component';
 import { ValidarNoticiaComponent } from './validar-noticia/validar-noticia.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
 
 const routes: Routes = [
   {path:'inicio', component: InicioComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'validar-noticia', component: ValidarNoticiaComponent},
   {path:'noticias-por-validar', component: NoticiasPorValidarComponent},
   {path:'olvide-mi-clave', component: OlvideMiClaveComponent},
-  {path:'nueva-noticia', component: NuevaNoticiaComponent}
+  {path:'nueva-noticia', component: NuevaNoticiaComponent},
+  {path:'main-nav', component: MainNavComponent}
 
 ];
 

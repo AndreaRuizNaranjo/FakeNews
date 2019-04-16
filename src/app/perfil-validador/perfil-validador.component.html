@@ -1,4 +1,58 @@
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>
+        <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/74187/preview.svg" class="mx-auto d-block m-4 logo">
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#"> Dashboard</a>
+      <a mat-list-item href="#"> User Profile</a>
+      <a mat-list-item href="#"> Notifications</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="name">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="(isHandset$) ">
+
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Fake News</span>
+
+      <div class="container principal">
+        <div class="row">
+            <div class="logout" >
+                <a href="#" class="text_logout"> Logout </a>
+                <mat-icon  class="icon_logout">power_settings_new</mat-icon>
+            </div>
+        </div>
+      </div>
+
+    </mat-toolbar>
+
+    <div class="container contenido">
+      <div class="row">
+          <div class="col-md-12 primero">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eius ipsam commodi voluptatem sint alias officiis quam laborum voluptatibus nostrum! Facere quod officia nisi similique exercitationem dolorum error voluptatem provident.</p>
+          </div>
+
+          <div class="col-md-6" style="background:yellow">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis laudantium vel corrupti maiores numquam iure neque sint tempore architecto velit dolore deleniti eos ut sapiente commodi eveniet, exercitationem incidunt!</p>
+          </div>
+      </div>
+  </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
 
@@ -67,4 +121,4 @@
 
   </div>
 
-</body>
+</body> -->

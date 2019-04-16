@@ -22,6 +22,10 @@ import { NuevaNoticiaComponent } from './nueva-noticia/nueva-noticia.component';
 import { ValidarNoticiaComponent } from './validar-noticia/validar-noticia.component';
 import { NoticiasPorValidarComponent } from './noticias-por-validar/noticias-por-validar.component';
 import { OlvideMiClaveComponent } from './olvide-mi-clave/olvide-mi-clave.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
@@ -38,7 +42,9 @@ import { OlvideMiClaveComponent } from './olvide-mi-clave/olvide-mi-clave.compon
     NuevaNoticiaComponent,
     ValidarNoticiaComponent, 
     NoticiasPorValidarComponent, 
-    OlvideMiClaveComponent 
+    OlvideMiClaveComponent, 
+    MainNavComponent,
+    
     
   ],
   imports: [
@@ -47,10 +53,18 @@ import { OlvideMiClaveComponent } from './olvide-mi-clave/olvide-mi-clave.compon
     NgbModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    ChartsModule
+    ChartsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    BrowserAnimationsModule
  
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class PizzaPartyAppModule { }

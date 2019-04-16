@@ -1,0 +1,38 @@
+ @import '@angular/material/prebuilt-themes/pink-bluegrey.css'; 
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav{
+  background:#2c3e50;
+}
+
+.name{
+  background:#2c3e50;
+}
+
+.menu{
+
+  background: #673ab7;
+}
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+.logo{
+  width: 25%;
+  padding: 0;
+  margin: 0;
+}

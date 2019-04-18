@@ -21,39 +21,37 @@
             <form action="" class="contenedor-register" >
               
               <div class="form-group">
-                <input type="name" class="form-control" name="name" placeholder="Name">
+                <input type="name" class="form-control" #name placeholder="Name">
               </div>
 
               <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="Email">
+                  <input type="email" class="form-control" #email placeholder="Email">
               </div>
 
               <div class="form-group">
-                  <input type="password" class="form-control" name="password" placeholder="Password">
+                  <input type="password" class="form-control" #password placeholder="Password">
               </div>
 
               <div class="form-group">
-                  <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
+                  <input type="password" class="form-control" #confirm_password placeholder="Confirm Password">
               </div>
 
               <div class="form-group">
                   <div class="form-row align-items-center">
                       <div class="col-auto my-1">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Tipo de Usuario</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" #tipoUsuario>
                           <option selected>Choose...</option>
                           <option value="Periodista">Periodista</option>
                           <option value="Validador">Validador</option>
-
                         </select>
                       </div>
               </div>
               </div>
 
               <div class= "form-group">
-                  <button type="submit" class=" boton btn btn-primary btn-block btn-lg">
-                    Register
-                  </button>
+                  <button class="btn btn-primary" style="background-color: rgb(4, 1, 39)" (click)="createUsuarioNuevo(name.value, email.value, password.value, confirm_password.value, tipoUsuario.value)">Guardar</button>
+
               </div>
 
 

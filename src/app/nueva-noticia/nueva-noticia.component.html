@@ -7,9 +7,8 @@
         <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/74187/preview.svg" class="mx-auto d-block m-4 logo">
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#"> Dashboard</a>
-      <a mat-list-item href="#"> User Profile</a>
-      <a mat-list-item href="#"> Notifications</a>
+      <a mat-list-item href="#"> Historial de noticias</a>
+      <a mat-list-item href="#"> Perfil del usuario</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -39,14 +38,29 @@
     <div class="container contenido">
       <div class="row">
           <div class="col-md-12 primero">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eius ipsam commodi voluptatem sint alias officiis quam laborum voluptatibus nostrum! Facere quod officia nisi similique exercitationem dolorum error voluptatem provident.</p>
+            <h1 style="color: rgb(3, 0, 51)">Formulario registrar nueva noticia</h1>
           </div>
 
-          <div class="col-md-6" style="background:yellow">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis laudantium vel corrupti maiores numquam iure neque sint tempore architecto velit dolore deleniti eos ut sapiente commodi eveniet, exercitationem incidunt!</p>
+          <div class="col-md-6">
+              <div id="formulario">
+                  <form id="" action="">
+                    <h3 style="color: rgb(3, 0, 51)">Fecha:</h3><br>
+                    <input type="date" #fecha class="form-control"><br>
+                    <h3 style="color: rgb(3, 0, 51)"> Fuente: </h3><br>
+                    <input placeholder="Fuente..." type="text" #fuente class="form-control"><br>
+                    <h3 style="color: rgb(3, 0, 51)"> Descripción:</h3><br>
+                    <textarea class="form-control" rows="4" cols="50" #comment form="usrform" placeholder="Escriba la noticia aquí...">
+                    </textarea><br>
+                    <h3 style="color: rgb(3, 0, 51)">Sujeto:</h3><br><br>
+                    <input placeholder="Sujeto..." type="text" #sujeto class="form-control"><br><br>
+                    <br><br>
+                    <button class="btn btn-primary" style="background-color: rgb(4, 1, 39)" (click)="createNoticia(fecha.value, fuente.value, comment.value, sujeto.value)">Guardar</button><br><br>
+                    <a routerLink="/periodista" class="btn btn-primary"  style="background-color: rgb(4, 1, 39)" role="button" aria-pressed="true">CANCELAR</a>
+                  </form>
+                </div>
           </div>
       </div>
-  </div>
+      </div>
 
   </mat-sidenav-content>
 </mat-sidenav-container>

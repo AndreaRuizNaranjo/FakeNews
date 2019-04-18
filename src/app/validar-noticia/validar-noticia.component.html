@@ -7,9 +7,8 @@
         <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/74187/preview.svg" class="mx-auto d-block m-4 logo">
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#"> Dashboard</a>
-      <a mat-list-item href="#"> User Profile</a>
-      <a mat-list-item href="#"> Notifications</a>
+        <a mat-list-item href="#"> Historial de noticias</a>
+        <a mat-list-item href="#"> Perfil del usuario</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -39,11 +38,66 @@
     <div class="container contenido">
       <div class="row">
           <div class="col-md-12 primero">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eius ipsam commodi voluptatem sint alias officiis quam laborum voluptatibus nostrum! Facere quod officia nisi similique exercitationem dolorum error voluptatem provident.</p>
+            <h1 class="titulo">Validar noticia</h1>
           </div>
 
-          <div class="col-md-6" style="background:yellow">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis laudantium vel corrupti maiores numquam iure neque sint tempore architecto velit dolore deleniti eos ut sapiente commodi eveniet, exercitationem incidunt!</p>
+          <div class="col-md-6">
+
+              <div class="card-body" class="cardbody" *ngFor="let nuevanoticia of items" >
+                 
+                    <div class="form-group" >
+                      <h4 style="color: rgb(3, 0, 51)" >Fecha: </h4>
+                      <p style="color: rgb(3, 0, 51)" >{{nuevanoticia.fecha}}</p>
+                    </div>
+
+                    <div class="form-group" >
+                      <h4 style="color: rgb(3, 0, 51)" >Fuente:</h4>
+                      <p style="color: rgb(3, 0, 51)" >{{nuevanoticia.fuente}}</p>
+                    </div>
+
+                    <div class="form-group" >
+                        <h4 style="color: rgb(3, 0, 51)" >Descripción:</h4>
+                        <p style="color: rgb(3, 0, 51)" >{{nuevanoticia.comment}}</p>
+                    </div>  
+                    
+                    <div class="form-group" >
+                        <h4 style="color: rgb(3, 0, 51)" >Sujeto:</h4>
+                        <p style="color: rgb(3, 0, 51)" >{{nuevanoticia.sujeto}}</p>
+                    </div> 
+
+                    <div class= "form-group">
+                        <button type="submit" class=" boton btn btn-primary btn-lg">
+                         Noticia Verdadera
+                        </button>
+                    </div>
+
+                          
+                    <div class= "form-group">
+                        <button type="submit" class=" boton btn btn-primary btn-lg">
+                         Noticia Falsa
+                        </button>
+                    </div>
+      
+                </div>
+
+
+<!--             <div id="formulario">
+                  <form id="formualrioValidacion" action="">
+                      <h3 style="color: rgb(3, 0, 51)">Fecha:</h3><br>
+                      {{Nuevanoticia.fecha}}
+                      <input type="password" class="form-control" name="password" placeholder="Password">
+                      <h3 style="color: rgb(3, 0, 51)"> Fuente: </h3><br>
+                      {{Nuevanoticia.fuente}}
+                      <h3 style="color: rgb(3, 0, 51)"> Descripción:</h3><br>
+                      {{Nuevanoticia.comment}}
+                      <h3 style="color: rgb(3, 0, 51)">Sujeto:</h3><br><br>
+                      {{Nuevanoticia.sujeto}}
+                    <button class="btn btn-primary" style="background-color: rgb(4, 1, 39)" (click)="NoticiaVerdadera(email.value)">Noticia verdadera</button>
+                    <button class="btn btn-primary" style="background-color: rgb(4, 1, 39)" (click)="NoticiaFalsa(email.value)">Noticia falsa</button>
+                  </form>
+                    <a routerLink="/validador" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cancelar</a>
+                  
+                </div>  -->
           </div>
       </div>
   </div>

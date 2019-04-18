@@ -7,9 +7,8 @@
           <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/74187/preview.svg" class="mx-auto d-block m-4 logo">
       </mat-toolbar>
       <mat-nav-list>
-        <a mat-list-item href="#"> Dashboard</a>
-        <a mat-list-item href="#"> User Profile</a>
-        <a mat-list-item href="#"> Notifications</a>
+          <a mat-list-item href="#"> Historial de noticias por validar</a>
+          <a mat-list-item href="#"> Perfil del usuario</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -38,19 +37,60 @@
 
       <div class="container contenido">
         <div class="row">
-            <div class="col-md-12 primero">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eius ipsam commodi voluptatem sint alias officiis quam laborum voluptatibus nostrum! Facere quod officia nisi similique exercitationem dolorum error voluptatem provident.</p>
+
+          <!-- ACA ESTA EL ARE A DE TRABAJO DEL COMPONENTE -->
+
+            <div class="col-md-12 primero ">
+              <h3 class="titulo">Bienvenido Validador 1</h3>
             </div>
 
-            <div class="col-md-6" style="background:yellow">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis laudantium vel corrupti maiores numquam iure neque sint tempore architecto velit dolore deleniti eos ut sapiente commodi eveniet, exercitationem incidunt!</p>
+          
+
+            <div class="col-md-12 table-responsive-sm">
+              <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">fecha de la noticia</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Validar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let nuevanoticia of items">
+                    <td>{{nuevanoticia.fecha}}</td>
+                    <td>{{nuevanoticia.comment}}</td>
+                    <td>
+                      <input type="radio" name="optradio" checked>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
         </div>
+
+
+        <a href="#" class="btn btn-dark" >Validar</a>
+
+
+        <!-- ACA TERMINA  :v -->
     </div>
 
     </mat-sidenav-content>
   </mat-sidenav-container>
   
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- <body>
 

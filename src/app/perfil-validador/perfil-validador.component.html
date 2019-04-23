@@ -7,8 +7,8 @@
         <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/74187/preview.svg" class="mx-auto d-block m-4 logo">
     </mat-toolbar>
     <mat-nav-list>
-        <a mat-list-item href="#"> Historial de noticias</a>
-        <a mat-list-item href="#"> Perfil del usuario</a>
+        <a mat-list-item routerLink="../validador"> Historial de noticias validadas</a>
+        <a mat-list-item routerLink="../perfil"> Perfil del usuario</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,7 +27,7 @@
       <div class="container principal">
         <div class="row">
             <div class="logout" >
-                <a href="#" class="text_logout"> Logout </a>
+                <a routerLink="/" class="text_logout"> Logout </a>
                 <mat-icon  class="icon_logout">power_settings_new</mat-icon>
             </div>
         </div>

@@ -1,8 +1,8 @@
 
-import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { environment} from '../environments/environment';
+import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 
@@ -20,33 +20,30 @@ import { PerfilPeriodistaComponent } from './perfil-periodista/perfil-periodista
 import { PerfilValidadorComponent } from './perfil-validador/perfil-validador.component';
 import { NuevaNoticiaComponent } from './nueva-noticia/nueva-noticia.component';
 import { ValidarNoticiaComponent } from './validar-noticia/validar-noticia.component';
+import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { NoticiasPorValidarComponent } from './noticias-por-validar/noticias-por-validar.component';
 import { OlvideMiClaveComponent } from './olvide-mi-clave/olvide-mi-clave.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    InicioComponent, 
+    InicioComponent,
     RegistroNuevoUsuarioComponent,
     PerfilPeriodistaComponent,
     PerfilValidadorComponent,
     NuevaNoticiaComponent,
-    ValidarNoticiaComponent, 
-    NoticiasPorValidarComponent, 
-    OlvideMiClaveComponent, 
+    ValidarNoticiaComponent,
+    NoticiasPorValidarComponent,
+    OlvideMiClaveComponent,
     MainNavComponent,
-    
-    
+    PerfilUsuarioComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -61,10 +58,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatIconModule,
     MatListModule,
     BrowserAnimationsModule
- 
   ],
+
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
+
 })
+
 export class AppModule { }
 export class PizzaPartyAppModule { }

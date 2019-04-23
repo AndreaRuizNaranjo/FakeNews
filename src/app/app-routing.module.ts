@@ -5,12 +5,11 @@ import { RegistroNuevoUsuarioComponent } from './registro-nuevo-usuario/registro
 import { PerfilPeriodistaComponent } from './perfil-periodista/perfil-periodista.component';
 import { PerfilValidadorComponent } from './perfil-validador/perfil-validador.component';
 import { NuevaNoticiaComponent } from './nueva-noticia/nueva-noticia.component';
-import { NoticiasPorValidarComponent } from './noticias-por-validar/noticias-por-validar.component';
 import { OlvideMiClaveComponent } from './olvide-mi-clave/olvide-mi-clave.component';
 import { ValidarNoticiaComponent } from './validar-noticia/validar-noticia.component';
-import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { NoticiasValidadasComponent } from './noticias-validadas/noticias-validadas.component';
+import { NoticiasCargadasComponent } from './noticias-cargadas/noticias-cargadas.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -18,12 +17,11 @@ const routes: Routes = [
   {path:'periodista', component: PerfilPeriodistaComponent},
   {path:'validador', component: PerfilValidadorComponent},
   {path:'validador/validar-noticia', component: ValidarNoticiaComponent},
-  {path:'validador/noticias-por-validar', component: NoticiasPorValidarComponent},
   {path:'olvide-mi-clave', component: OlvideMiClaveComponent},
   {path:'periodista/nueva-noticia', component: NuevaNoticiaComponent},
   {path:'main-nav', component: MainNavComponent},
-  {path:'perfil', component: PerfilUsuarioComponent},
-  {path:'validador/noticias-validadas', component: NoticiasValidadasComponent}
+  {path:'validador/noticias-validadas', component: NoticiasValidadasComponent},
+  {path:'periodista/noticias-cargadas', component: NoticiasCargadasComponent}
 
 ];
 

@@ -21,6 +21,7 @@ import { PerfilValidadorComponent } from './perfil-validador/perfil-validador.co
 import { NuevaNoticiaComponent } from './nueva-noticia/nueva-noticia.component';
 import { ValidarNoticiaComponent } from './validar-noticia/validar-noticia.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+import { NoticiasValidadasComponent } from './noticias-validadas/noticias-validadas.component';
 import { NoticiasPorValidarComponent } from './noticias-por-validar/noticias-por-validar.component';
 import { OlvideMiClaveComponent } from './olvide-mi-clave/olvide-mi-clave.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -41,7 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NoticiasPorValidarComponent,
     OlvideMiClaveComponent,
     MainNavComponent,
-    PerfilUsuarioComponent
+    PerfilUsuarioComponent,
+    NoticiasValidadasComponent
   ],
 
   imports: [

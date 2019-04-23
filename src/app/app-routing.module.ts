@@ -10,6 +10,7 @@ import { OlvideMiClaveComponent } from './olvide-mi-clave/olvide-mi-clave.compon
 import { ValidarNoticiaComponent } from './validar-noticia/validar-noticia.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { NoticiasValidadasComponent } from './noticias-validadas/noticias-validadas.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'olvide-mi-clave', component: OlvideMiClaveComponent},
   {path:'periodista/nueva-noticia', component: NuevaNoticiaComponent},
   {path:'main-nav', component: MainNavComponent},
-  {path:'perfil', component: PerfilUsuarioComponent}
+  {path:'perfil', component: PerfilUsuarioComponent},
+  {path:'validador/noticias-validadas', component: NoticiasValidadasComponent}
 
 ];
 

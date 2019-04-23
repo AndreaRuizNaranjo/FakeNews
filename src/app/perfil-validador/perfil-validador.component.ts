@@ -13,33 +13,5 @@ import {nuevanoticia} from '../nueva-noticia/nuevanoticia';
 })
 export class PerfilValidadorComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
-
-    private db: AngularFirestore;
-    userCollectionRef: AngularFirestoreCollection<Nuevanoticia>;
-    items: Nuevanoticia[];
   
-    constructor(db: AngularFirestore, private breakpointObserver: BreakpointObserver) {
-      this.db = db;
-      this.userCollectionRef = db.collection<Nuevanoticia>('FormularioNuevaNoticia');
-     
-      this.userCollectionRef.snapshotChanges().subscribe( data =>{
-      if (data) {
-        this.items = data.map( item =>{
-          const data = item.payload.doc.data() as Nuevanoticia;
-          data.sujeto = item.payload.doc.id;
-          return data;
-        });
-      }
-     }, 
-     err => console.log('Error ' + err),
-     () => console.log('yay'))
-  
-    }
-    public getNoticiasporvalidar() {
-      return this.db.collection('FormularioNuevaNoticia').snapshotChanges();
-    }
 }

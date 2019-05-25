@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/firestore';
+import { HttpClient } from '@angular/common/http';
 
 export interface NuevoUsuario {
 name: string;
@@ -21,22 +22,8 @@ export class RegistroNuevoUsuarioComponent {
   userCollectionRef: AngularFirestoreCollection<NuevoUsuario>;
   items:NuevoUsuario[];
 
-  constructor(db: AngularFirestore) {
-    this.db = db;
-    this.userCollectionRef = db.collection<NuevoUsuario>('CrearUsuario');
-   
-    this.userCollectionRef.snapshotChanges().subscribe( data =>{
-  	if (data) {
-  		this.items = data.map( item =>{
-        const data = item.payload.doc.data() as NuevoUsuario;
-        data.name = item.payload.doc.id;
-        return data;
-      });
-  	}
-   }, 
-   err => console.log('Error ' + err),
-   () => console.log('yay'))
-
+  constructor(private http:HttpClient) {
+  
   }
 
 createUsuarioNuevo(name: string, email: string, password: string, confirm_password: string, tipoUsuario: boolean){

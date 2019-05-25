@@ -52,10 +52,10 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let nuevanoticia of items">
-                      <td>{{nuevanoticia.fecha}}</td>
-                      <td>{{nuevanoticia.comment}}</td>
-                      <td><img class="check"></td>
+                    <tr *ngFor="let data of Nuevanoticia">
+                      <td>{{data.fecha}}</td>
+                      <td>{{data.titulo}}</td>
+                      <td>{{data.validada}}<img class="check"></td>
                     </tr>
                 
                   </tbody>

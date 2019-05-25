@@ -1,11 +1,13 @@
 
-import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { environment} from '../environments/environment';
+import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
 
+import { Http, HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
@@ -25,7 +27,7 @@ import { OlvideMiClaveComponent } from './olvide-mi-clave/olvide-mi-clave.compon
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -35,18 +37,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     HeaderComponent,
-    InicioComponent, 
+    InicioComponent,
     RegistroNuevoUsuarioComponent,
     PerfilPeriodistaComponent,
     PerfilValidadorComponent,
     NuevaNoticiaComponent,
-    ValidarNoticiaComponent, 
-    NoticiasPorValidarComponent, 
-    OlvideMiClaveComponent, 
-    MainNavComponent,
-    
-    
+    ValidarNoticiaComponent,
+    NoticiasPorValidarComponent,
+    OlvideMiClaveComponent,
+    MainNavComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -60,10 +61,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    BrowserAnimationsModule
- 
+    BrowserAnimationsModule,
+    HttpClientModule,
+    HttpModule
+
   ],
-  providers: [AngularFirestore],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/firestore';
+import { HttpClient } from '@angular/common/http';
 
 export interface Nuevanoticia {
   fecha: Date;
@@ -23,21 +24,8 @@ export class NuevaNoticiaComponent {
   userCollectionRef: AngularFirestoreCollection<Nuevanoticia>;
   items: Nuevanoticia[];
 
-  constructor(db: AngularFirestore) {
-    this.db = db;
-    this.userCollectionRef = db.collection<Nuevanoticia>('FormularioNuevaNoticia');
+  constructor( private http:HttpClient) {
    
-    this.userCollectionRef.snapshotChanges().subscribe( data =>{
-  	if (data) {
-  		this.items = data.map( item =>{
-        const data = item.payload.doc.data() as Nuevanoticia;
-        data.sujeto = item.payload.doc.id;
-        return data;
-      });
-  	}
-   }, 
-   err => console.log('Error ' + err),
-   () => console.log('yay'))
 
   }
 

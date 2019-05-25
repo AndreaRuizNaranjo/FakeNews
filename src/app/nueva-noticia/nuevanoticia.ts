@@ -1,6 +1,8 @@
 export class nuevanoticia{
-fecha: Date;
-fuente: string;
-comment: string;
-sujeto: string;
+    titulo: string;
+    autor: string;
+    fuente: string;
+    fecha: string;
+    descripcion: string;
+    validado: boolean;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-olvide-mi-clave',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OlvideMiClaveComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit() {
   }

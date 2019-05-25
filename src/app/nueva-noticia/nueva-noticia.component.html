@@ -7,8 +7,9 @@
         <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/74187/preview.svg" class="mx-auto d-block m-4 logo">
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#"> Historial de noticias</a>
-      <a mat-list-item href="#"> Perfil del usuario</a>
+        <a mat-list-item routerLink="../"> Perfil del usuario</a><br>
+        <a mat-list-item routerLink="../noticias-cargadas"> Historial de noticias cargadas</a><br>
+        <a mat-list-item routerLink="../nueva-noticia"> Nueva Noticia</a><br>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,7 +28,7 @@
       <div class="container principal">
         <div class="row">
             <div class="logout" >
-                <a href="#" class="text_logout"> Logout </a>
+                <a routerLink="/" class="text_logout"> Logout </a>
                 <mat-icon  class="icon_logout">power_settings_new</mat-icon>
             </div>
         </div>
@@ -38,12 +39,13 @@
     <div class="container contenido">
       <div class="row">
           <div class="col-md-12 primero">
-            <h1 style="color: rgb(3, 0, 51)">Formulario registrar nueva noticia</h1>
+            <h1 style="color: rgb(3, 0, 51);padding-left:40px;padding-top:20px;">Carga Una Nueva Noticia</h1>
           </div>
 
           <div class="col-md-6">
-              <div id="formulario">
+              <div id="formulario" style="padding:10px 50px 50px 50px;">
                   <form id="" action="">
+<<<<<<< HEAD
                       <h3 style="color: rgb(3, 0, 51)">Titulo:</h3><br>
                       <input placeholder="Titulo..." #titulo class="form-control"><br>
                       <h3 style="color: rgb(3, 0, 51)">Autor:</h3><br><br>
@@ -56,9 +58,20 @@
                     <textarea class="form-control" rows="4" cols="50" #comment form="usrform" placeholder="Escriba la noticia aquí...">
                     </textarea><br>
                     
+=======
+                    <h5 style="color: rgb(3, 0, 51)">Fecha:</h5><br>
+                    <input type="date" #fecha class="form-control"><br>
+                    <h5 style="color: rgb(3, 0, 51)"> Fuente: </h5><br>
+                    <input placeholder="Fuente..." type="text" #fuente class="form-control"><br>
+                    <h5 style="color: rgb(3, 0, 51)"> Descripción:</h5><br>
+                    <textarea class="form-control" rows="4" cols="50" #comment form="usrform" placeholder="Escriba la noticia aquí...">
+                    </textarea><br>
+                    <h5 style="color: rgb(3, 0, 51)">Sujeto:</h5><br><br>
+                    <input placeholder="Sujeto..." type="text" #sujeto class="form-control"><br><br>
+>>>>>>> 1c6943891d2af0e9e8f5c6aeda1e4fecffc87d93
                     <br><br>
-                    <button class="btn btn-primary" style="background-color: rgb(4, 1, 39)" (click)="createNoticia(fecha.value, fuente.value, comment.value, sujeto.value)">Guardar</button><br><br>
-                    <a routerLink="/periodista" class="btn btn-primary"  style="background-color: rgb(4, 1, 39)" role="button" aria-pressed="true">CANCELAR</a>
+                    <button class="btn btn-primary" style="background-color: rgb(4, 1, 39)" (click)="createNoticia(fecha.value, fuente.value, comment.value, sujeto.value)">Guardar</button>
+                    <a routerLink="/periodista" class="btn btn-primary"  style="background-color: rgb(4, 1, 39);margin-left:20px;" role="button" aria-pressed="true">Cancelar</a>
                   </form>
                 </div>
           </div>
@@ -67,52 +80,3 @@
 
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-<!-- <body>
-
-	<div class="grid-container">
-
-		<div id="menu" class="item2">
-			<h3>Bienvenido Validador 1</h3>
-			<br>
-      <img id="perfil-icono" src="https://image.flaticon.com/icons/svg/149/149071.svg">
-      <br>
-      <h5>PVR: </h5> <label>83</label><br>
-      <h5>Porcentaje de red validada: </h5> <label>43%</label> <br><br>
-      <h5>Nombre: </h5> <label>Validador 1</label> <br>
-      <h5>Correo: </h5> <label>v1@fakenews.com</label> <br>
-      <h5>Rol: </h5> <label>Validador</label> <br><br><br>
-
-      <a routerLink="/inicio">Cerrar Sesión</a>
-
-    </div>
-
-    <div id="main" class="item3">
-
-      <h1>Cargar Nueva Noticia</h1>
-
-      <br><br>
-
-    
-	<div id="formulario">
-		<form id="" action="">
-			<label>Fecha:</label><br><br>
-			<input type="date" name="fecha" class="form-control"><br><br>
-      <label>Fuente:</label><br><br>
-			<input placeholder="Fuente..." type="text" name="fuente" class="form-control"><br><br>
-      <label>Descripción:</label><br><br>
-      <textarea class="form-control" rows="4" cols="50" name="comment" form="usrform" placeholder="Escriba la noticia aquí...">
-      </textarea><br><br>
-      <label>Sujeto:</label><br><br>
-			<input placeholder="Sujeto..." type="text" name="fuente" class="form-control"><br><br>
-      <br><br><br><br>
-      <input class="ingresar btn btn-primary btn-lg" type="submit" value="CARGAR NUEVA NOTICIA"><br><br>
-      <a routerLink="/periodista" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">CANCELAR</a>
-    </form>
-  </div>
-
-    </div>  
-
-  </div>
-
-</body> -->

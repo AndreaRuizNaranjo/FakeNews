@@ -23,7 +23,6 @@ export interface Nuevanoticia {
   styleUrls: ['./perfil-periodista.component.css']
 })
 export class PerfilPeriodistaComponent {
-
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
@@ -51,4 +50,5 @@ export class PerfilPeriodistaComponent {
       console.log(data.validado);
     });*/
     }
+
 }

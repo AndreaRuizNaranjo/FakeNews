@@ -1,19 +1,25 @@
 <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="!(isHandset$ | async)">
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="!(isHandset$ | async)">
       <mat-toolbar>
-        <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/74187/preview.svg" class="mx-auto d-block m-4 logo">
+          <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/74187/preview.svg" class="mx-auto d-block m-4 logo">
       </mat-toolbar>
       <mat-nav-list>
-          <a mat-list-item routerLink="../periodista"> Perfil del usuario</a><br>
-          <a mat-list-item routerLink="../periodista/noticias-cargadas"> Historial de noticias cargadas</a><br>
-          <a mat-list-item routerLink="../periodista/nueva-noticia"> Nueva Noticia</a><br>
+          <a mat-list-item routerLink="../"> Perfil del usuario</a><br>
+          <a mat-list-item routerLink="../noticias-cargadas"> Historial de noticias cargadas</a><br>
+          <a mat-list-item routerLink="../nueva-noticia"> Nueva Noticia</a><br>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
       <mat-toolbar class="name">
-        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="(isHandset$) ">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="(isHandset$) ">
   
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
@@ -21,10 +27,10 @@
   
         <div class="container principal">
           <div class="row">
-            <div class="logout">
-              <a routerLink="/" class="text_logout"> Logout </a>
-              <mat-icon class="icon_logout">power_settings_new</mat-icon>
-            </div>
+              <div class="logout" >
+                  <a routerLink="/" class="text_logout"> Logout </a>
+                  <mat-icon  class="icon_logout">power_settings_new</mat-icon>
+              </div>
           </div>
         </div>
   
@@ -32,64 +38,37 @@
   
       <div class="container contenido">
         <div class="row">
-  
-          <div class="col-md-12 table-responsive-sm">
-            <div class="ficha">
-  
-              <br>
-              <h1 class="titulo-perfil">Sara Chamseddine</h1>
-              <img class="img-perfil" src="https://image.flaticon.com/icons/svg/149/149071.svg">
-  
-              <div class="datos">
-                <b class="negrillas">Rol: </b> Periodista
-                <br>
-                <b class="negrillas">PVR: </b> +52
-                <br>
-                <b class="negrillas">Noticias Subidas: </b> 26
-                <br>
-                <b class="negrillas">Email: </b> sarychamsf@hotmail.com
-  
-              </div>
-  
+            <div class="col-md-12 primero">
+              <h1 class="titulo">Historial de noticias cargadas</h1>
             </div>
   
-          </div>
+            <div class="col-md-12 table-responsive-sm">
+                <table class="table table-dark">
+                      <thead>
+                        <tr>
+                          <th scope="col">fecha de la noticia</th>
+                          <th scope="col">Descripción</th>
+                          <th scope="col">Validada</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let nuevanoticia of items">
+                          <td>{{nuevanoticia.fecha}}</td>
+                          <td>{{nuevanoticia.comment}}</td>
+                          <td>
+                            <img class="check" style="width: 30px;" src="https://image.flaticon.com/icons/svg/190/190411.svg">
+                            <img class="check" style="width: 30px;" src="https://image.flaticon.com/icons/svg/753/753345.svg">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+            
+                    <br><br><br>
+                    <a routerLink="/periodista/nueva-noticia" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">CARGAR NUEVA NOTICIA</a>
+            
+                  </div>
         </div>
-      </div>
-<<<<<<< HEAD
-
-    </mat-toolbar>
-
-    <div class="container contenido">
-      <div class="row">
-          <div class="col-md-12 primero">
-            <h1 class="titulo">Mis noticias cargadas</h1>
-          </div>
-
-          <div class="col-md-12 table-responsive-sm">
-              <table class="table table-dark">
-                    <thead>
-                      <tr>
-                        <th scope="col">fecha de la noticia</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Validada</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let nuevanoticia of items">
-                        <td>{{nuevanoticia.fecha}}</td>
-                        <td>{{nuevanoticia.titulo}}</td>
-                        <td><img class="check"></td>
-                      </tr>
-                  
-                    </tbody>
-                  </table>
-          
-                  <br><br><br>
-                  <a routerLink="/periodista/nueva-noticia" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">CARGAR NUEVA NOTICIA</a>
-          
-                </div>
-=======
+    </div>
   
     </mat-sidenav-content>
   </mat-sidenav-container>
@@ -111,7 +90,6 @@
   
         <a routerLink="/inicio">Cerrar Sesión</a>
   
->>>>>>> 1c6943891d2af0e9e8f5c6aeda1e4fecffc87d93
       </div>
   
       <div id="main" class="item3">

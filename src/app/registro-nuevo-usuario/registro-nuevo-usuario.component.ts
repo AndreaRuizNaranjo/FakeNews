@@ -3,11 +3,9 @@ import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/fire
 import { HttpClient } from '@angular/common/http';
 
 export interface NuevoUsuario {
-name: string;
+nombre: string;
 email: string;
-password: string;
-confirm_password: string;
-tipoUsuario: boolean;
+contrasena: string;
 }
 
 
@@ -26,14 +24,16 @@ export class RegistroNuevoUsuarioComponent {
   
   }
 
-createUsuarioNuevo(name: string, email: string, password: string, confirm_password: string, tipoUsuario: boolean){
-  return this.db.collection('CrearUsuario').add({
-    name: name,
-    email: email,
-    password: password,
-    confirm_password: confirm_password,
-    tipoUsuario: tipoUsuario,
-  });
+createUsuarioNuevo(nombre: string, email: string, contrasena: string){
+  console.log("fadfds");
+ 
+  return this.http.post('http://localhost:8080/myapp/fakenewsval', {
+      nombre: nombre,
+      email: email,
+      contrasena: contrasena
+    }).subscribe(
+      res => {console.log(res)},err => {console.log(err)}
+    );
+  
 }
-
 }

@@ -15,6 +15,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ValidarNoticiaComponent {
   
+  
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
@@ -28,9 +29,8 @@ export class ValidarNoticiaComponent {
     }
     
     ngOnInit(): void {
-      this.http.get<nuevanoticia>('http://localhost:8080/myapp/fakenews').subscribe(data=>{
-        console.log(data);
-    
+      this.http.get<nuevanoticia[]>('http://localhost:8080/myapp/fakenews').subscribe(data=>{
+        this.items = data;
     });
   }
 

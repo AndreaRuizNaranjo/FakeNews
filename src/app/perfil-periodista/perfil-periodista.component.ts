@@ -7,15 +7,6 @@ import { Nuevanoticia } from '../nueva-noticia/nueva-noticia.component';
 import {nuevanoticia} from '../nueva-noticia/nuevanoticia';
 import { HttpClient } from '@angular/common/http';
 
-export interface Nuevanoticia {
-  titulo: string;
-  autor: string;
-  fuente: string;
-  fecha: string;
-  descripcion: string;
-  validado: boolean;
- 
- }
 
 @Component({
   selector: 'app-perfil-periodista',
@@ -37,18 +28,11 @@ export class PerfilPeriodistaComponent {
     }
      
     ngOnInit(): void {
-      this.http.get<nuevanoticia>('http://localhost:8080/myapp/fakenews').subscribe(data=>
-      {console.log(data);
-    
+      this.http.get<nuevanoticia[]>('http://localhost:8080/myapp/fakenews').subscribe(data=>{
+        this.items = data;
     });
-     /* this.http.get<nuevanoticia>('http://localhost:8080/myapp/fakenews').subscribe(data => { 
-      console.log(data.titulo);
-      console.log(data.autor);
-      console.log(data.descripcion);
-      console.log(data.fecha);
-      console.log(data.fuente);
-      console.log(data.validado);
-    });*/
+   
+    
     }
 
 }

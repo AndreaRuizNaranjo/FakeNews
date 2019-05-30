@@ -6,10 +6,12 @@ import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/fire
 import { HttpClient } from '@angular/common/http';
 
 export interface Nuevanoticia {
-  fecha: Date;
-  fuente: string;
-  comment: string;
-  sujeto: string;
+    titulo: string;
+    autor: string;
+    fuente: string;
+    fecha: string;
+    descripcion: string;
+    validado: boolean;
  
  }
 
@@ -29,12 +31,18 @@ export class NuevaNoticiaComponent {
 
   }
 
-  createNoticia(fecha: Date, fuente: string, comment: string, sujeto: string){
-    return this.db.collection('FormularioNuevaNoticia').add({
-      fecha: fecha,
+  createNoticia(titulo: string, autor: string, fuente: string, fecha: string, descripcion: string, validado: boolean){
+    console.log("fadfds");
+  
+    return this.http.post('http://localhost:8080/myapp/fakenews' , {
+      titulo: titulo,
+      autor: autor,
       fuente: fuente,
-      comment: comment,
-      sujeto: sujeto
-    });
+      fecha: fecha,
+      descripcion: descripcion,
+      validado: validado
+    }).subscribe(
+      res => {console.log(res)},err => {console.log(err)}
+    );
   }
 }

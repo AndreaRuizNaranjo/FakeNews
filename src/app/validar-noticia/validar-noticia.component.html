@@ -43,22 +43,20 @@
             <thead>
               <tr>
                 <th scope="col">fecha de la noticia</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Sujeto</th>
-                <th scope="col">Fuente</th>
-                <th scope="col">Validar</th>
+                <th scope="col">fuente de la noticia</th>
+                <th scope="col">autor de la noticia</th>
+                <th scope="col">descripcion de la noticia</th>
+                <th scope="col">validado</th>
+                
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let nuevanoticia of items">
                 <td>{{nuevanoticia.fecha}}</td>
-                <td>{{nuevanoticia.comment}}</td>
-                <td>{{nuevanoticia.sujeto}}</td>
                 <td>{{nuevanoticia.fuente}}</td>
-                <td>
-                    <button><img class="check" style="width: 30px;" src="https://image.flaticon.com/icons/svg/190/190411.svg"></button>
-                    <button><img class="check" style="width: 30px;" src="https://image.flaticon.com/icons/svg/753/753345.svg"></button>
-                </td>
+                <td>{{nuevanoticia.autor}}</td>
+                <td>{{nuevanoticia.descripcion}}</td>
+                <td>{{nuevanoticia.validado}}</td>
               </tr>
             </tbody>
           </table>

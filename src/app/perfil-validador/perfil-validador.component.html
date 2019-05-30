@@ -28,32 +28,33 @@
           </div>
         </div>
       </div>
-
     </mat-toolbar>
-
+    
     <div class="container contenido">
       <div class="row">
 
-<<<<<<< HEAD
          <div class="col-md-12 table-responsive-sm">
-            <table class="table table-dark">
-                  <thead>
-                    <tr>
-                      <th scope="col">fecha de la noticia</th>
-                      <th scope="col">Descripción</th>
-                      <th scope="col">Validada</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let data of Nuevanoticia">
-                      <td>{{data.fecha}}</td>
-                      <td>{{data.titulo}}</td>
-                      <td>{{data.validada}}<img class="check"></td>
-                    </tr>
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">fecha de la noticia</th>
+                <th scope="col">fuente de la noticia</th>
+                <th scope="col">autor de la noticia</th>
+                <th scope="col">descripcion de la noticia</th>
+                <th scope="col">validado</th>
                 
-                  </tbody>
-                </table>
-        
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let nuevanoticia of items">
+                <td>{{nuevanoticia.fecha}}</td>
+                <td>{{nuevanoticia.fuente}}</td>
+                <td>{{nuevanoticia.autor}}</td>
+                <td>{{nuevanoticia.descripcion}}</td>
+                <td>{{nuevanoticia.validado}}</td>
+              </tr>
+            </tbody>
+          </table>
           
                   <br><br><br>
                   <a routerLink="/validador/validar-noticia" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">VALIDAR NUEVA NOTICIA</a>
@@ -61,10 +62,8 @@
          </div> 
       </div>
   </div>
-=======
         <div class="col-md-12 table-responsive-sm">
           <div class="ficha">
->>>>>>> 1c6943891d2af0e9e8f5c6aeda1e4fecffc87d93
 
             <br>
             <h1 class="titulo-perfil">Sara Chamseddine</h1>
@@ -82,9 +81,6 @@
             </div>
 
           </div>
-
-        </div>
-      </div>
     </div>
 
   </mat-sidenav-content>

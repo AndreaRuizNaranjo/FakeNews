@@ -45,7 +45,6 @@
           <div class="col-md-6">
               <div id="formulario" style="padding:10px 50px 50px 50px;">
                   <form id="" action="">
-<<<<<<< HEAD
                       <h3 style="color: rgb(3, 0, 51)">Titulo:</h3><br>
                       <input placeholder="Titulo..." #titulo class="form-control"><br>
                       <h3 style="color: rgb(3, 0, 51)">Autor:</h3><br><br>
@@ -53,24 +52,15 @@
                       <h3 style="color: rgb(3, 0, 51)"> Fuente: </h3><br>
                     <input placeholder="Fuente..." type="text" #fuente class="form-control"><br>
                     <h3 style="color: rgb(3, 0, 51)">Fecha:</h3><br>
-                    <input type="date" #fecha class="form-control"><br>
+                    <input type="text" #fecha class="form-control"><br>
                     <h3 style="color: rgb(3, 0, 51)"> Descripción:</h3><br>
-                    <textarea class="form-control" rows="4" cols="50" #comment form="usrform" placeholder="Escriba la noticia aquí...">
+                    <textarea class="form-control" rows="4" cols="50" #descripcion form="usrform" placeholder="Escriba la noticia aquí...">
                     </textarea><br>
+                    <h3 style="color: rgb(3, 0, 51)">Validado:</h3><br>
+                    <input placeholder="true/false..." type="text" #validado  class="form-control"><br>
                     
-=======
-                    <h5 style="color: rgb(3, 0, 51)">Fecha:</h5><br>
-                    <input type="date" #fecha class="form-control"><br>
-                    <h5 style="color: rgb(3, 0, 51)"> Fuente: </h5><br>
-                    <input placeholder="Fuente..." type="text" #fuente class="form-control"><br>
-                    <h5 style="color: rgb(3, 0, 51)"> Descripción:</h5><br>
-                    <textarea class="form-control" rows="4" cols="50" #comment form="usrform" placeholder="Escriba la noticia aquí...">
-                    </textarea><br>
-                    <h5 style="color: rgb(3, 0, 51)">Sujeto:</h5><br><br>
-                    <input placeholder="Sujeto..." type="text" #sujeto class="form-control"><br><br>
->>>>>>> 1c6943891d2af0e9e8f5c6aeda1e4fecffc87d93
                     <br><br>
-                    <button class="btn btn-primary" style="background-color: rgb(4, 1, 39)" (click)="createNoticia(fecha.value, fuente.value, comment.value, sujeto.value)">Guardar</button>
+                    <button class="btn btn-primary" style="background-color: rgb(4, 1, 39)" (click)="createNoticia(titulo.value, autor.value, fuente.value, fecha.value, descripcion.value, validado.value)">Guardar</button>
                     <a routerLink="/periodista" class="btn btn-primary"  style="background-color: rgb(4, 1, 39);margin-left:20px;" role="button" aria-pressed="true">Cancelar</a>
                   </form>
                 </div>

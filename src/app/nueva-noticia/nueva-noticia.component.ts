@@ -22,8 +22,6 @@ export interface Nuevanoticia {
 })
 export class NuevaNoticiaComponent {
 
-  private db: AngularFirestore;
-  userCollectionRef: AngularFirestoreCollection<Nuevanoticia>;
   items: Nuevanoticia[];
 
   constructor( private http:HttpClient) {

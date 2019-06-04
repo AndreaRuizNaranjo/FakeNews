@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Nuevanoticia } from '../nueva-noticia/nueva-noticia.component';
-import {nuevanoticia} from '../nueva-noticia/nuevanoticia';
 import { HttpClient } from '@angular/common/http';
+import { nuevanoticia } from '../nueva-noticia/nuevanoticia';
 
 
 @Component({
@@ -16,13 +16,9 @@ import { HttpClient } from '@angular/common/http';
 export class ValidarNoticiaComponent {
   
   
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
-    private db: AngularFirestore;
-    userCollectionRef: AngularFirestoreCollection<Nuevanoticia>;
-    items: Nuevanoticia[];
+ 
+    items: nuevanoticia[];
+
   
     constructor(private http:HttpClient, private breakpointObserver: BreakpointObserver) {
      
@@ -32,6 +28,18 @@ export class ValidarNoticiaComponent {
       this.http.get<nuevanoticia[]>('http://localhost:8080/myapp/fakenews').subscribe(data=>{
         this.items = data;
     });
+    
+  }
+
+  ModificarNoticia(validado: boolean){
+    console.log("fadfds");
+  
+    return this.http.put('http://localhost:8080/myapp/fakenews/fghj' , {
+ 
+      validado: validado
+    }).subscribe(
+      res => {console.log(res)},err => {console.log(err)}
+    );
   }
 
 
